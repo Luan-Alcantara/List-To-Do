@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List to do</title>
+    <!--icons usados no projeto-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <!--link CSS-->
+    <link rel = 'stylesheet' href = "/CSS/style.css">
+    <!--link JavaScript-->
+    <script src = "/JavaScript/script.js" defer></script>
+</head>
+<body>
+    <div class="todo-container">
+        <!--Titulo da list to do-->
+        <header>
+            <h1>Todo Avancado</h1>
+        </header>
+        <!--Inicio do formulario para preencher-->
+        <form id = "todo-form">
+            <!--Adicione tarefas-->
+            <p>Adicione a sua tarefa</p>
+            <div class="form-control">
+                <input type = "text" id="todo-input" placeholder = "Qual a tarefa?">
+                <button type = "submit">
+                    <i class="fi fi-ts-multiple"></i>
+                </button>
+            </div>
+            <!--Fim adicione tarefas-->
+        </form>
+        <form id="edit-form" class = "hide">
+            <!--Editar tarefas-->
+            <p>Edite a sua tarefa</p>
+            <div class = "form-control"> 
+                <input type = "text" id = "edit-input">
+                <button type = "submit">
+                    <i class="fi fi-rs-edit"></i>
+                </button>
+            </div>
+            <!--Fim editar tarefas-->
+            <!--Cancelar acao de adicionar ou editar-->
+            <button id ="cancel-edit-btn">Cancelar</button>
+            <!--Fim cancelar acao-->
+        </form>
+        <div id="toolbar">
+            <div id="search">
+                <!--Pesquisar tarefas-->
+                <h4>Pesquisar</h4>
+                <form>
+                    <input type = "text" id = "search-input" placeholder = "Buscar...">
+                    <button id = "erase-button">
+                        <i class="fi fi-ss-delete"></i>
+                    </button>
+                <!--Fim pesquisar-->
+                </form>
+            <!--Fim formulario-->
+            </div>
+            <div id="filter">
+                <!--Filtrar tarefas (feito ou a fazer)-->
+                <h4>Filtrar</h4>
+                <select id = "filter-select">
+                    <option value = "all">Todos</option>
+                    <option value = "done">Feito</option>
+                    <option value = "todo">A fazer</option>
+                </select>
+            </div>
+            <!--Fim filtrar-->
+        </div>
+        <!-- Template -->
+        <div id="todo-list">
+            <div class="todo">
+                <h3>Estou fazendo alguma coisa...</h3>
+                <!--Tarefas finalizadas-->
+                <button class = "finish-todo">
+                    <i class="fi fi-bs-check"></i>
+                </button>
+                <!--Fim das tarefas finalizadas-->
+                <!--Editar tarefa adicionada-->
+                <button class = "edit-todo">
+                    <i class="fi fi-sr-pencil"></i>
+                </button>
+                <!--Fim editar tarefa-->
+                <!--Remover tarefa adicionada-->
+                <button class = "remove-todo">
+                    <i class="fi fi-bs-remove-folder"></i>
+                </button>
+                <!--Fim do remover tarefa-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
